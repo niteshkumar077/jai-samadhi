@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --color-saffron-50: #fff8e1;
+  --color-saffron-100: #ffecb3;
+  --color-saffron-200: #ffe082;
+  --color-saffron-300: #ffd54f;
+  --color-saffron-400: #ffca28;
+  --color-saffron-500: #ffc107;
+  --color-saffron-600: #ffb300;
+  --color-saffron-700: #ffa000;
+  --color-saffron-800: #ff8f00;
+  --color-saffron-900: #ff6f00;
+  --color-glass-bg: rgba(255, 255, 255, 0.1);
+  --color-glass-border: rgba(255, 255, 255, 0.2);
+  --font-sans: var(--font-inter);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans), sans-serif;
+  scroll-behavior: smooth;
+  @apply selection:bg-saffron-200 selection:text-saffron-900;
+}
+
+.glass {
+  background: var(--color-glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-glass-border);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.dark .glass-card {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Force hide all Next.js development and static route indicators */
+[data-nextjs-toast],
+[data-nextjs-portal],
+[data-nextjs-indicator],
+[data-next-indicator],
+[data-turbopack-indicator],
+#nextjs-portal,
+#nextjs-indicator-root,
+#nextjs-static-indicator-root,
+#__next-prerender-indicator,
+#__turbopack_indicator__,
+.nextjs-static-indicator-root,
+.next-dev-indicator,
+nextjs-portal,
+nextjs-indicator,
+turbopack-indicator {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  position: fixed !important;
+  z-index: -9999 !important;
+  left: -9999px !important;
+  transform: scale(0) !important;
+}
