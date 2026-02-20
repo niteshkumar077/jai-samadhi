@@ -19,26 +19,12 @@ Jai Samadhi is a spiritual platform dedicated to the **Baba Garib Das Temple** i
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **UI Components**: [Radix UI](https://www.radix-ui.com/)
 
-## 🚀 Getting Started
 
-First, install the dependencies:
-
-```bash
-npm install
-```
-
-Then, run the development server:
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## 📍 Visit Us
 
 **Location**: Baba Garib Das Temple, Kashmore (Ghouspur), Sindh, Pakistan.
-**Contact**: jsofficial.bgd@gmail.com | +92 308 7678391
+**Contact**: jsofficial.bgd@gmail.com | +92 3131234273
 
 ---
 *Continuing the legacy of service and spirituality under the sevadari of Dada Hikmat Rai.*
