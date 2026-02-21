@@ -6,6 +6,13 @@ const nextConfig: NextConfig = {
   },
   images: {
     formats: ['image/webp'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'i.ytimg.com',
+        pathname: '/**',
+      },
+    ],
   },
   async headers() {
     return [
