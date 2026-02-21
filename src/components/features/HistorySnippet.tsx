@@ -10,7 +10,7 @@ export function HistorySnippet() {
                 </h2>
                 <div className="prose prose-lg dark:prose-invert mx-auto mb-10">
                     <p className="text-xl md:text-2xl leading-relaxed font-serif italic text-gray-700 dark:text-gray-300">
-                        "Baba Garib Das Temple in Kashmore (Ghouspur) is the oldest and most prestigious Hindu worship place in the district, with a global following."
+                        &quot;Baba Garib Das Temple in Kashmore (Ghouspur) is the oldest and most prestigious Hindu worship place in the district, with a global following.&quot;
                     </p>
                     <div className="my-8 h-px w-24 bg-saffron-400 mx-auto" />
                     <p className="text-lg text-gray-600 dark:text-gray-400">

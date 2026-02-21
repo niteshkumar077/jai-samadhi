@@ -1,9 +1,10 @@
+import dynamic from "next/dynamic";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Section } from "@/components/ui/Section";
-import { VideoGrid } from "@/components/features/VideoGrid";
-import { Button } from "@/components/ui/Button";
 import { MessageCircle } from "lucide-react";
+
+const VideoGrid = dynamic(() => import("@/components/features/VideoGrid").then(mod => mod.VideoGrid), { ssr: true });
 
 export default function BhajanPage() {
     return (

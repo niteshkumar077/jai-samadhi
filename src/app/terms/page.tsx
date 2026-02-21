@@ -27,7 +27,7 @@ export default function TermsPage() {
                         <section className="space-y-3">
                             <h2 className="text-xl font-bold text-gray-900 dark:text-white">2. Content and Sacred Media</h2>
                             <p>
-                                The content provided on this website, including but not limited to the sacred "Akhand Dhuni Sahib" text, recorded bhajans, and spiritual successions, is for personal and spiritual use only.
+                                The content provided on this website, including but not limited to the sacred &quot;Akhand Dhuni Sahib&quot; text, recorded bhajans, and spiritual successions, is for personal and spiritual use only.
                             </p>
                             <p>
                                 Redistribution, commercial use, or modification of this sacred content without explicit permission from the temple administration is prohibited.

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Card } from "@/components/ui/Card";
 
 interface Video {
@@ -18,19 +18,44 @@ const videos: Video[] = [
     { id: "6", videoId: "B863fvoRwFc", title: "Asn bachran ji tokhy parat aa sain | JAI SAMADHI |" },
 ];
 
+// YouTube IFrame API Types
+interface YTPlayer {
+    pauseVideo: () => void;
+}
+
+interface YTEvent {
+    data: number;
+    target: YTPlayer;
+}
+
 declare global {
     interface Window {
         onYouTubeIframeAPIReady: () => void;
-        YT: any;
+        YT: {
+            Player: new (elementId: string, options: object) => YTPlayer;
+            PlayerState: {
+                PLAYING: number;
+            };
+        };
     }
 }
 
 export function VideoGrid() {
-    const playersRef = useRef<any[]>([]);
-    const [mounted, setMounted] = React.useState(false);
+    const playersRef = useRef<(YTPlayer | null)[]>([]);
+    const [mounted, setMounted] = useState(false);
+
+    const pauseOtherVideos = (currentIndex: number) => {
+        playersRef.current.forEach((player, index) => {
+            if (index !== currentIndex && player && typeof player.pauseVideo === 'function') {
+                player.pauseVideo();
+            }
+        });
+    };
 
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setMounted(true);
+
         // Load YouTube IFrame API if not already present
         if (!window.YT) {
             const tag = document.createElement('script');
@@ -49,7 +74,7 @@ export function VideoGrid() {
                         enablejsapi: 1,
                     },
                     events: {
-                        onStateChange: (event: any) => {
+                        onStateChange: (event: YTEvent) => {
                             // YT.PlayerState.PLAYING is 1
                             if (event.data === 1) {
                                 pauseOtherVideos(index);
@@ -67,18 +92,9 @@ export function VideoGrid() {
         }
 
         return () => {
-            // Cleanup: No easy way to remove the global callback, but we can clear references
             playersRef.current = [];
         };
     }, []);
-
-    const pauseOtherVideos = (currentIndex: number) => {
-        playersRef.current.forEach((player, index) => {
-            if (index !== currentIndex && player && typeof player.pauseVideo === 'function') {
-                player.pauseVideo();
-            }
-        });
-    };
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

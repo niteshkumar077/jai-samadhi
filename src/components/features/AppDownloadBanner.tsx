@@ -1,8 +1,7 @@
 "use client";
 
 import { Section } from "@/components/ui/Section";
-import { Button } from "@/components/ui/Button";
-import { Play, Apple } from "lucide-react";
+
 
 export function AppDownloadBanner() {
     return (

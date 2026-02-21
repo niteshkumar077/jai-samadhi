@@ -33,7 +33,11 @@ body {
   background: var(--background);
   font-family: var(--font-sans), sans-serif;
   scroll-behavior: smooth;
-  @apply selection:bg-saffron-200 selection:text-saffron-900;
+}
+
+::selection {
+  background-color: var(--color-saffron-200);
+  color: var(--color-saffron-900);
 }
 
 .glass {
@@ -82,4 +86,20 @@ turbopack-indicator {
   z-index: -9999 !important;
   left: -9999px !important;
   transform: scale(0) !important;
+}
+
+/* Performance Optimizations */
+section,
+.grid,
+.container {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 500px;
+  /* Placeholder size to prevent layout shift */
+}
+
+/* Specific overrides for above-the-fold content to ensure immediate rendering */
+header,
+.hero,
+#hero {
+  content-visibility: visible;
 }

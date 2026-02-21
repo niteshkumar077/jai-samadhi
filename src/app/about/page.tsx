@@ -4,9 +4,8 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
-import { Card } from "@/components/ui/Card";
 import { MapEmbed } from "@/components/features/MapEmbed";
-import { Instagram, Youtube, Twitter, Mail, Phone, Send, Facebook, MessageCircle } from "lucide-react";
+import { Instagram, Mail, Phone, Send, Facebook, MessageCircle } from "lucide-react";
 import { useState } from "react";
 
 export default function AboutPage() {
@@ -40,7 +39,7 @@ export default function AboutPage() {
                 <div className="max-w-4xl mx-auto text-center space-y-6">
                     <h1 className="text-4xl md:text-5xl font-bold text-saffron-800">Our Story</h1>
                     <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-serif italic">
-                        "Baba Garib Das Temple in Kashmore (Ghouspur) is the oldest and most prestigious Hindu worship place in the district, with a global following."
+                        &quot;Baba Garib Das Temple in Kashmore (Ghouspur) is the oldest and most prestigious Hindu worship place in the district, with a global following.&quot;
                     </p>
                     <div className="text-left bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm border border-saffron-100 dark:border-saffron-900/50 mt-8">
                         <p className="mb-4 text-gray-600 dark:text-gray-400">

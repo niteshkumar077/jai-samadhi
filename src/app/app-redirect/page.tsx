@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/Button";
 import { Apple, Play, Smartphone, Wifi, BookOpen, Music } from "lucide-react";
 import Link from "next/link";
 

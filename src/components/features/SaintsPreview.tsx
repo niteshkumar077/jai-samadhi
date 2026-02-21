@@ -24,7 +24,7 @@ export function SaintsPreview() {
                 </h2>
                 <div className="max-w-2xl mx-auto">
                     <p className="text-xl italic font-serif text-gray-600 dark:text-gray-300">
-                        "Where there is love, there is God. The path of the saints is the path of love, service, and humility."
+                        &quot;The spiritual journey is not about reaching a destination, but about becoming the path itself. Where there is love, there is God.&quot;
                     </p>
                     <div className="h-1 w-20 bg-saffron-400 mx-auto mt-4 rounded-full" />
                 </div>

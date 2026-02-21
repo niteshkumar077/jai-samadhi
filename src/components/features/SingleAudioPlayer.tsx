@@ -33,7 +33,7 @@ export function SingleAudioPlayer({ title, artist, src, isPlaying, onToggle }: S
                 audioRef.current.pause();
             }
         }
-    }, [isPlaying]);
+    }, [isPlaying, onToggle]);
 
     const handleTimeUpdate = () => {
         if (audioRef.current) {

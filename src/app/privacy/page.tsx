@@ -30,7 +30,7 @@ export default function PrivacyPage() {
                                 We do not require users to create accounts or provide personal data to browse the spiritual content, watch bhajans, or read sacred texts.
                             </p>
                             <p>
-                                When you use our "Contact Us" form, we collect your name and email address solely to respond to your inquiries. This information is not shared with third parties or used for marketing purposes.
+                                When you use our &quot;Contact Us&quot; form, we collect your name and email address solely to respond to your inquiries. This information is not shared with third parties or used for marketing purposes.
                             </p>
                         </section>
 

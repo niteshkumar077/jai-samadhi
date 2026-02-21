@@ -1,12 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
+import dynamic from "next/dynamic";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Section } from "@/components/ui/Section";
-import { SingleAudioPlayer } from "@/components/features/SingleAudioPlayer";
-import { PDFViewer } from "@/components/features/PDFViewer";
 import { Music, BookOpen } from "lucide-react";
+
+const SingleAudioPlayer = dynamic(() => import("@/components/features/SingleAudioPlayer").then(mod => mod.SingleAudioPlayer), { ssr: true });
+const PDFViewer = dynamic(() => import("@/components/features/PDFViewer").then(mod => mod.PDFViewer), { ssr: true });
 
 export default function NaamPage() {
     // Shared state for mutual exclusion
@@ -64,7 +66,7 @@ export default function NaamPage() {
 
                         <div className="p-6 bg-saffron-50 dark:bg-saffron-900/10 border-l-4 border-saffron-400 rounded-r-lg shadow-sm">
                             <p className="text-lg text-saffron-800 dark:text-saffron-300 font-serif italic text-center">
-                                "The Naam is the bridge between the soul and the Divine, a sacred vibration that transcends time and space."
+                                &quot;The Naam is the bridge between the soul and the Divine, a sacred vibration that transcends time and space.&quot;
                             </p>
                         </div>
                     </div>
